@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.CadastroClientes">
+    <ContentPage.Content>
+        <StackLayout>           
+			<Entry Placeholder="Nome" Text="{Binding NomeCliente}"/>
+			<Label Text="Filhos" />
+			<Slider Minimum="0" Maximum="10" Value="{Binding Filhos}"/>
+			<Entry Placeholder="Endereço" Text="{Binding Endereco}"/>
+			<Label Text="Data de Nascimento" />
+			<DatePicker Date="{Binding DataNascimento}"/>
+			<Button Text="Cadastrar" Command="{Binding CadastrarCliente}"/>
+			<ListView ItemsSource="{Binding Clientes}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextCell Text="{Binding Nome}" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>
