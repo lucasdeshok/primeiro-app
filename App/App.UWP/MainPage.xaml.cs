@@ -21,7 +21,7 @@ namespace App.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new App.App());
+            //LoadApplication(new App.App());
         }
     }
 }
