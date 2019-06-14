@@ -8,8 +8,6 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Newtonsoft.Json; 
 
-
-
 namespace App
 {
 	public class CadastroDeClientesVM : INotifyPropertyChanged
@@ -100,8 +98,8 @@ namespace App
 				var jsonRequest = new
 				{
 					nome = clienteNovo.Nome,
-					filhos = clienteNovo.Filhos,
-					endereco = clienteNovo.Endereco,
+					filhos = Convert.ToInt32(clienteNovo.Filhos),
+					endereco = clienteNovo.Endereco.ToString(),
 					dataNascimento = clienteNovo.DataNascimento.ToString("yyyy-MM-dd")
 				};
 
